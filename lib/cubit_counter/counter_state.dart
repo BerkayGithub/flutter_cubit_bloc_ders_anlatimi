@@ -1,15 +1,15 @@
 part of 'counter_cubit.dart';
 
 @immutable
-sealed class CounterState {
+sealed class CounterCubitState {
   final int sayac;
-  const CounterState({required this.sayac});
+  const CounterCubitState({required this.sayac});
 }
 
-final class CounterInitial extends CounterState {
+final class CounterInitial extends CounterCubitState {
   const CounterInitial({required int baslangicDegeri}) : super(sayac: baslangicDegeri);
 }
 
-class MyCounterState extends CounterState {
+class MyCounterState extends CounterCubitState {
   const MyCounterState({required int sayacDegeri}) : super(sayac: sayacDegeri);
 }
